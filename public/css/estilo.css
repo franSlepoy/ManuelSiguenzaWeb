@@ -1,0 +1,133 @@
+* {
+    
+          font-family: 'Merriweather Sans', sans-serif;
+           background-color: #fafafa;
+           padding: 2px;
+     
+}
+.titulo {
+       font-size: 20px;
+       color: rgb(18, 18, 47,);
+       letter-spacing: 0.2em;
+       padding: 5px;
+       margin:auto;
+       
+   
+}
+.hamburguesa {
+    height: 60px;
+    width: 60px;
+    font-size: 30px;
+ 
+ }
+
+header.mobile {
+     display: grid;
+     grid-template-columns: 90% 10% ;
+     grid-template-rows: 1fr ;
+     font-family: 'Merriweather Sans', sans-serif;
+     background-color: #fafafa;
+     padding: 5px;
+     position: fixed;
+     
+     
+}
+header.compu {
+     display: none;
+ }
+.contenedorObras {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, 340px );
+      margin-top: 150px;
+      
+     
+
+
+}
+img {
+     max-width: 300px;
+}
+
+footer {
+     display: flex;
+     justify-content:center ;
+     margin-top: 32px;
+     border-top:1px solid rgba(18, 18, 47,0.3); ;
+}
+.redes{
+    padding: 5px;
+    margin: 20px;
+}
+a {
+     text-decoration: none;
+}
+.contacto {
+   padding: 5px;
+   margin: 20px;
+}
+
+ @media (min-width: 760px){
+     header.compu{
+          display: block;
+          font-family: 'Merriweather Sans', sans-serif;
+          background-color: #fafafa;
+          padding: 5px;
+          position: fixed;
+     }
+     
+     .contenedorObras {
+          margin-top: 250px;
+     }
+
+     header.mobile{
+         display: none;
+     }
+     nav {
+          margin-top: -62px;
+     }
+     .titulo {
+          font-size: 110px;
+          color: rgb(18, 18, 47,);
+          letter-spacing: 0.3em;
+          font-size: 40px;
+     }
+     ul {
+          display: flex;
+          flex-direction: row;
+          flex-wrap: wrap;
+          justify-content: flex-start;
+         }
+         
+         li {
+          list-style-type: none;
+          padding: 10px;
+          margin: 5px;
+          transition: all 3s;
+     }
+     a.nav {
+          text-decoration: none;
+          color: rgb(108, 108, 205);
+          transition: all 3s;
+      }
+      a:hover{
+          color:rgb(18, 18, 47);
+          text-shadow: 50px 50px 100px rgb(108, 108, 205);
+         
+      }
+      .redes,
+      .contacto {
+          transition: all 3s;
+      }
+      .redes,
+      .contacto:hover{
+          color:rgb(18, 18, 47);
+          text-shadow: 50px 50px 100px rgb(108, 108, 205);
+      }
+      img {
+         transition: all 3s; 
+      }
+      img:hover {
+          box-shadow: 10px 10px 30px rgb(18, 18, 47);
+      }
+
+} 
