@@ -12,6 +12,9 @@ const obrasController = {
     menuMobile : (req,res) => {
         return res.render(path.resolve(__dirname, "../views/obras/menuMobile"));
     },
+    bio : (req,res) => {
+        return res.render(path.resolve(__dirname, "../views/obras/bio"));
+    },
     detail : (req,res) => {
         let id = req.params.id;
         const obraElegida = obras.find((obra) => obra.id == id)
