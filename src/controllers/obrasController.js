@@ -22,7 +22,22 @@ const obrasController = {
     },
     crear: (req,res) => {
         res.render(path.join(__dirname, "../views/obras/crear"));
+    },
+    store: (req, res) => {
+		let nuevaObra = {
+			id: obras.length == 0? 1: obras[obras.length - 1].id + 1,
+    nombre_año: req.body.nombre_año ,
+    descripción: req.body.descripción ,
+    precio: req.body.precio,
+    imagen: req.file.filename,
     }
+	obras.push(nuevaObra);
+	let nuevaObraGuardar = JSON.stringify(obras,null,2);
+	fs.writeFileSync(path.resolve(__dirname, "../data/obras.json"), nuevaObraGuardar);
+	
+	res.redirect("/");
+},
+
 }
 
 module.exports = obrasController
