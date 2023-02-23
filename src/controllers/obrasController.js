@@ -19,6 +19,9 @@ const obrasController = {
         let id = req.params.id;
         const obraElegida = obras.find((obra) => obra.id == id)
         return res.render(path.resolve(__dirname, "../views/obras/detalleObra"), {obraElegida})
+    },
+    crear: (req,res) => {
+        res.render(path.join(__dirname, "../views/obras/crear"));
     }
 }
 

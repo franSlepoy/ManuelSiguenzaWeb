@@ -7,4 +7,6 @@ router.get("/menuMobile", obrasController.menuMobile);
 router.get("/bio", obrasController.bio);
 router.get("/detalleObra/:id", obrasController.detail)
 
+router.get("/crear", obrasController.crear);
+
 module.exports = router;
