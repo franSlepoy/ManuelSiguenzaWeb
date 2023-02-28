@@ -89,5 +89,10 @@
     "precio": "53.000",
     "descripción": "Eh vo! aca ve a a ir una descripcion de verdad en algun momento. Escultura de alta gama con alto diseño, todo re piola",
     "imagen": "../imagenes/IMGL5347.jpeg"
+  },
+  {
+    "id": 13,
+    "precio": "33333",
+    "imagen": "obra1677188580925.jpeg"
   }
 ]
