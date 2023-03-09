@@ -37,6 +37,11 @@ const obrasController = {
 	
 	res.redirect("/");
 },
+    editar: (req,res) => {
+        const obraId = req.params.id;
+        let obraEditar = obras.find(obra => obra.id == obraId);
+        res.render("editar", {obraEditar})
+    },
 
 }
 

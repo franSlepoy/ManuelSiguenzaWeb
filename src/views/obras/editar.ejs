@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/estilo.css">
+    <link rel="stylesheet" href="/css/formulario.css">
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather+Sans&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Karla:ital@1&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/851c995492.js" crossorigin="anonymous"></script>
+    <link rel="icon" href="/imagenes/IMGL5368.jpeg">
+    <title>Manuel Siguenza</title>
+</head>
+<%- include("../partials/header") %>
+<br>
+<body>
+    
+    <form action="/obras/editar/?_method=PUT" 
+     method="POST"   enctype="multipart/form-data">
+        <h1 class="titulo">Editar</h1>
+        <br>
+       <label for="name">Título y año de la obra:</label>
+        <input type="name" placeholder="Ingresá el nombre y año" id="" name="nombre_año" required value="<%- obraEditar.nombre_año %>">
+        <br>
+        <br>
+        <label for="description">Descripción</label>
+        <input type="name" placeholder="Ingresá descripción" id="descripción" name="descripción" required value="descripción">
+        <br>
+        <br>
+        <label for="prod_img">Imagen de la obra:</label>
+        <img src="/imagenes/<%- obraEditar.imagen %>" alt="obra <%- obraEditar %>">
+        <input type="hidden" name="oldImagen" value="<%- obraEditar.imagen %>" > 
+        <br>
+        
+      <br>
+      <br>
+      <label for="price">Precio:</label>
+      <input type="number" placeholder="Ingresá el precio de la obra" id="precio" name="precio" required value="precio">
+      <br>
+        <br>
+          <button class="login" type="submit">Enviar</button>
+        <br>
+      </form>
+</body>
+<br>
+
+<%- include("../partials/footer") %>
+</html>

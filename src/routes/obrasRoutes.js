@@ -23,4 +23,6 @@ router.get("/detalleObra/:id", obrasController.detail)
 router.get("/crear", obrasController.crear);
 router.post("/crear", upload.single("imagen"), obrasController.store);
 
+router.get("/editar/:id", obrasController.editar);
+
 module.exports = router;
