@@ -1,4 +1,4 @@
-const { response } = require("express");
+const { response, json } = require("express");
 const fs = require("fs");
 const path = require("path");
 
@@ -42,6 +42,19 @@ const obrasController = {
         let obraEditar = obras.find(obra => obra.id == obraId);
         res.render("editar", {obraEditar})
     },
+    update: (req,res) => {
+        req.body.id = req.params.id;
+        req.body.imagen = req.file ? req.file.filename : req.body.oldImagen;
+        let obrasUpdate = obras.map(obra => {
+            if(obra.id == req.body.id){
+                return obra = req.body;
+            }
+            return obra;
+        })
+        let obraActualizar = json.stringify(obrasUpdate,null,2)
+        fs.writeFileSync(path.resolve(__dirname,"../data/obras.json"), obraActualizar)
+        res.redirect("/")
+    }
 
 }
 

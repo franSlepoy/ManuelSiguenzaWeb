@@ -24,5 +24,5 @@ router.get("/crear", obrasController.crear);
 router.post("/crear", upload.single("imagen"), obrasController.store);
 
 router.get("/editar/:id", obrasController.editar);
-
+router.put("/editar/:id", upload.single("imagen"), obrasController.update);
 module.exports = router;
