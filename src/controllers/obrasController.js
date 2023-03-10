@@ -39,23 +39,38 @@ const obrasController = {
 },
     editar: (req,res) => {
         const obraId = req.params.id;
-        let obraEditar = obras.find(obra => obra.id == obraId);
-        res.render("editar", {obraEditar})
+        let obraEditar = obras.find(obra=> obra.id == obraId);
+        res.render(path.join(__dirname, "../views/obras/crear"), {obraEditar})
     },
-    update: (req,res) => {
-        req.body.id = req.params.id;
-        req.body.imagen = req.file ? req.file.filename : req.body.oldImagen;
-        let obrasUpdate = obras.map(obra => {
-            if(obra.id == req.body.id){
-                return obra = req.body;
-            }
-            return obra;
-        })
-        let obraActualizar = json.stringify(obrasUpdate,null,2)
-        fs.writeFileSync(path.resolve(__dirname,"../data/obras.json"), obraActualizar)
-        res.redirect("/")
-    }
-
+    //update: (req,res) => {
+    //    req.body.id = req.params.id;
+    //    req.body.imagen = req.file ? req.file.filename : req.body.oldImagen;
+    //    let obrasUpdate = obras.map(obra => {
+    //        if(obra.id == req.body.id){
+    //            return obra = req.body;
+    //        }
+    //        return obra;
+    //    })
+    //    let obraActualizar = json.stringify(obrasUpdate,null,2)
+    //    fs.writeFileSync(path.resolve(__dirname,"../data/obras.json"), obraActualizar)
+    //    res.redirect("/")
+   // }
+   
+   destroy: (req,res)=>{
+    eliminarObra(req.params.id);
+    return res.redirect("/")
+ }
 }
+function getObraLista(path) {
+	return JSON.parse(fs.readFileSync(path, 'utf-8'));
+}
+
+function eliminarObra(id){
+    let obras = getObraLista(obrasFilePath);
+    obras = obras.filter( obra => obra.id != id);
+    fs.writeFileSync(obrasFilePath, JSON.stringify(obras,null,2));
+}  
+
+
 
 module.exports = obrasController
