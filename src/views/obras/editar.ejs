@@ -23,8 +23,8 @@
         <input type="name" placeholder="Ingresá el nombre y año" id="" name="nombre_año" required value="<%- obraEditar.nombre_año %>">
         <br>
         <br>
-        <label for="description">Descripción</label>
-        <input type="name" placeholder="Ingresá descripción" id="descripción" name="descripción" required value="descripción">
+        <label for="description">Descripción:</label>
+        <input type="name" placeholder="Ingresá descripción" id="descripción" name="descripción" required value="<%- obraEditar.descripción %>">
         <br>
         <br>
         <label for="prod_img">Imagen de la obra:</label>
@@ -35,7 +35,7 @@
       <br>
       <br>
       <label for="price">Precio:</label>
-      <input type="number" placeholder="Ingresá el precio de la obra" id="precio" name="precio" required value="precio">
+      <input type="number" placeholder="Ingresá el precio de la obra" id="precio" name="precio" required value="<%- obraEditar.precio %>">
       <br>
         <br>
           <button class="login" type="submit">Enviar</button>
