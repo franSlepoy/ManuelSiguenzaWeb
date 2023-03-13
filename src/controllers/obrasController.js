@@ -42,19 +42,15 @@ const obrasController = {
         let obraEditar = obras.find(obra=> obra.id == obraId);
         res.render(path.join(__dirname, "../views/obras/editar"), {obraEditar})
     },
-    //update: (req,res) => {
-    //    req.body.id = req.params.id;
-    //    req.body.imagen = req.file ? req.file.filename : req.body.oldImagen;
-    //    let obrasUpdate = obras.map(obra => {
-    //        if(obra.id == req.body.id){
-    //            return obra = req.body;
-    //        }
-    //        return obra;
-    //    })
-    //    let obraActualizar = json.stringify(obrasUpdate,null,2)
-    //    fs.writeFileSync(path.resolve(__dirname,"../data/obras.json"), obraActualizar)
-    //    res.redirect("/")
-   // }
+    update: (req,res) => {
+        const id = req.params.id;
+        const obra = {
+            id,
+            ...req.body
+        }
+        guardarObra(obra)
+        return res.redirect("/")
+    },
    
    destroy: (req,res)=>{
     eliminarObra(req.params.id);
@@ -64,7 +60,17 @@ const obrasController = {
 function getObraLista(path) {
 	return JSON.parse(fs.readFileSync(path, 'utf-8'));
 }
+function guardarObra(obraGuardar){
+    const obra = getObraLista(obrasFilePath);
 
+    const obraLista = obras.map(ob => {
+        if(ob.id == obraGuardar.id){
+            return obraGuardar
+        }
+        return ob;
+    });
+    fs.writeFileSync(obrasFilePath, JSON.stringify(obraLista,null,2))
+}
 function eliminarObra(id){
     let obras = getObraLista(obrasFilePath);
     obras = obras.filter( obra => obra.id != id);
