@@ -47,6 +47,9 @@ header.compu {
 img {
      max-width: 300px;
 }
+.obra-muestras {
+     max-width: 600px;
+}
 
 footer {
      display: flex;
@@ -130,5 +133,6 @@ a {
       img:hover {
           box-shadow: 10px 10px 30px rgb(18, 18, 47);
       }
+
 
 } 

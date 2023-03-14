@@ -34,16 +34,13 @@
        
         </div>
     </article>
-    <br>
-    <br>
+    
     <form method="POST" action="/eliminar/<%= obraElegida.id %>?_method=DELETE" style="display: inline-flex">
         <button type="submit" class="action-button-delete">ELIMINAR</button>
     </form>
+
         <button type="submit" class="action-button-edit">
             <a href="/editar/<%= obraElegida.id %>">EDITAR</a>
-        </button>
-        <button type="submit" class="action-button-edit">
-            <a href="/crear/<%= obraElegida.id %>">CREAR</a>
         </button>
     
     <% } %>

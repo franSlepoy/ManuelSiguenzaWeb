@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
     <head>
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -12,13 +11,24 @@
         <link rel="icon" href="/imagenes/IMGL5368.jpeg">
         <title>Manuel Siguenza</title>
     </head>
-</head>
+
+    <%- include("../partials/header") %>
 <body>
-    <a href="/muestras"><h1 class="titulo"> Obras </h1></a> 
-    <a href="/bio"><h1 class="titulo"> CV </h1></a>
-    <a href=""><h1 class="titulo"> Textos </h1></a>
-    <a href="/"><h1 class="titulo"> Shop </h1></a> 
-    <a href=""><h1 class="titulo"> Contacto </h1></a>
     
+
+    <div class="contenedorMuestra">
+        <% if(locals.muestras) {%>
+        <% muestras.forEach( muestra => { %> 
+              
+    <div class="obra-muestra">
+        <a href="/muestraDetalle/<%=muestra.id%>">
+            <img class="obra-muestras" src="/imagenes/<%= muestra.imagenPrincipal %>" alt="obra-muestras">
+        </a>
+    </div>
+    <% }) %>
+    <% } %>
+   </div>
+
 </body>
+<%- include("../partials/footer") %>
 </html>

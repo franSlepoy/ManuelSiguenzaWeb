@@ -3,7 +3,8 @@ const path = require("path");
 const app = express();
 const methodOverride = require('method-override');
 const PORT = process.env.PORT || 3000;
-const obrasRoutes = require("./routes/obrasRoutes")
+const obrasRoutes = require("./routes/obrasRoutes");
+const muestrasRoutes = require("./routes/muestrasRoutes");
 
 app.use(methodOverride('_method'));
 app.use(express.static('public'));
@@ -11,6 +12,7 @@ app.set("view engine", "ejs");
 app.set("views", path.join(__dirname, "views"))
 
 app.use("/", obrasRoutes);
+app.use("/muestras", muestrasRoutes);
 
 
 app.listen(PORT, ()=> console.log ("Servidor escuchando al puerto", PORT))
