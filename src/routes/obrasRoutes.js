@@ -20,7 +20,7 @@ router.get("/menuMobile", obrasController.menuMobile);
 router.get("/bio", obrasController.bio);
 router.get("/detalleObra/:id", obrasController.detail)
 
-router.get("/crear", obrasController.crear);
+router.get("/crear/:id", obrasController.crear);
 router.post("/crear", upload.single("imagen"), obrasController.store);
 
 router.get("/editar/:id", obrasController.editar);

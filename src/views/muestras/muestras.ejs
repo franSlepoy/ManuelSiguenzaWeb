@@ -17,12 +17,11 @@
     
 
     <div class="contenedorMuestra">
-        <% if(locals.muestras) {%>
-        <% muestras.forEach( muestra => { %> 
-              
-    <div class="obra-muestra">
+        <% if(locals.muestra) {%>
+        <% muestra.forEach( muestra => { %>   
+    <div class="obra">
         <a href="/muestraDetalle/<%=muestra.id%>">
-            <img class="obra-muestras" src="/imagenes/<%= muestra.imagenPrincipal %>" alt="obra-muestras">
+            <img class="imagen-muestra" src="/imagenes/<%= muestra.imagenPrincipal %>" alt="imagen de obra">
         </a>
     </div>
     <% }) %>

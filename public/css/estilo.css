@@ -39,17 +39,22 @@ header.compu {
       display: grid;
       grid-template-columns: repeat(auto-fill, 340px );
       margin-top: 150px;
-      
-     
-
-
 }
-img {
+      
+.contenedorMuestra {
+     display: grid;
+     grid-template-columns: repeat(auto-fill, 680px );
+     margin-top: 250px;
+} 
+.imagenMuestra {
+     max-width: 600px;
+}    
+
+.imagenObra {
      max-width: 300px;
 }
-.obra-muestras {
-     max-width: 600px;
-}
+
+
 
 footer {
      display: flex;
@@ -60,13 +65,16 @@ footer {
 .redes{
     padding: 5px;
     margin: 20px;
+    
 }
 a {
      text-decoration: none;
+     
 }
 .contacto {
    padding: 5px;
    margin: 20px;
+   
 }
 
  @media (min-width: 760px){
@@ -78,7 +86,7 @@ a {
           position: fixed;
           width: 100%;
      }
-     
+    
      .contenedorObras {
           margin-top: 250px;
      }
@@ -125,7 +133,7 @@ a {
       .redes,
       .contacto:hover{
           color:rgb(18, 18, 47);
-          text-shadow: 50px 50px 100px rgb(108, 108, 205);
+          text-shadow: 50px 50px 100px rgb(157, 157, 255);
       }
       img {
          transition: all 3s; 
@@ -133,6 +141,4 @@ a {
       img:hover {
           box-shadow: 10px 10px 30px rgb(18, 18, 47);
       }
-
-
-} 
+     }

@@ -8,27 +8,20 @@
   },
   {
     "id": 3,
-    "nombre_año": "Un tipito - 2010",
-    "precio": "40.000",
-    "descripción": "Escultura de alta gama con alto diseño, todo re piola",
-    "imagen": "../imagenes/IMGL5377.jpeg"
-  },
-  {
-    "id": 4,
     "nombre_año": "Para Messi - 2022",
     "precio": "520.000",
     "descripción": " Comprale ya, no te vas a repentir.Escultura de alta gama con alto diseño, todo re piola",
     "imagen": "../imagenes/IMGL5402.jpeg"
   },
   {
-    "id": 5,
+    "id": 4,
     "nombre_año": "Para Di Maria - 2021",
     "precio": "525.000",
     "descripción": "Que haces que no le comras, Escultura de alta gama con alto diseño, todo re piola",
     "imagen": "../imagenes/IMGL5435.jpeg"
   },
   {
-    "id": 6,
+    "id": 5,
     "nombre_año": "Scaloneta - 2019",
     "precio": "210.000",
     "descripción": "esta es la que va por que la hice con tod mi persona, Escultura de alta gama con alto diseño, todo re piola",
