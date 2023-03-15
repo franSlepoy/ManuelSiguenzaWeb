@@ -40,21 +40,18 @@ header.compu {
       grid-template-columns: repeat(auto-fill, 340px );
       margin-top: 150px;
 }
-      
-.contenedorMuestra {
-     display: grid;
-     grid-template-columns: repeat(auto-fill, 680px );
-     margin-top: 250px;
-} 
-.imagenMuestra {
-     max-width: 600px;
-}    
-
 .imagenObra {
      max-width: 300px;
 }
-
-
+      
+.contenedorMuestras {
+     display: grid;
+     grid-template-columns: repeat(auto-fill, 340px );
+     margin-top: 150px;
+} 
+.imagenMuestra {
+     max-width: 300px;
+}    
 
 footer {
      display: flex;
@@ -90,6 +87,14 @@ a {
      .contenedorObras {
           margin-top: 250px;
      }
+     .contenedorMuestra {
+          display: grid;
+          grid-template-columns: repeat(auto-fill, 680px );
+          margin-top: 250px;
+     } 
+     .imagenMuestra {
+          max-width: 600px;
+     }  
 
      header.mobile{
          display: none;
