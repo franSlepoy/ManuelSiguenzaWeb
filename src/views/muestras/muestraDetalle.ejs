@@ -15,32 +15,67 @@
     </head>
 <body>
     <%- include("../partials/header") %>
-    <% if (obraElegida) {%>
-    <article>
-        <img src="<%= obraElegida.imagen %>" alt="una-obra-de-arte"> <br>
-        <div class="detalle-obra">
-            <h2 class="titulo-obra"><%= obraElegida.nombre_año %></h2>
-        <div class="precio-boton">
-           <h2 class="precio-obra"><%= obraElegida.precio %></h2> 
-           
+    <% if (muestraElegida) {%>
+        <h1 class="titulo-muestra"><%= muestraElegida.titulo %></h1>
+        <p class="descripcion-muestra"><%= muestraElegida.descripcion %></p>
+    <div class="contenedorDetalleMuestras">
+        <div class="obra">
+        <img class="imagenMuestra" src="/imagenes/<%= muestraElegida.imagen1 %>" alt="imagen de obra">
+        </div>
+        <div class="obra">
+            <img class="imagenMuestra" src="/imagenes/<%= muestraElegida.imagen2 %>" alt="imagen de obra">
+        </div>
+        <div class="obra">
+            <img class="imagenMuestra" src="/imagenes/<%= muestraElegida.imagen3 %>" alt="imagen de obra">
+        </div>
+        <div class="obra">
+            <img class="imagenMuestra" src="/imagenes/<%= muestraElegida.imagen4 %>" alt="imagen de obra">
+        </div>
+        <div class="obra">
+            <img class="imagenMuestra" src="/imagenes/<%= muestraElegida.imagen5 %>" alt="imagen de obra">
+        </div>
+        <div class="obra">
+            <img class="imagenMuestra" src="/imagenes/<%= muestraElegida.imagen6 %>" alt="imagen de obra">
+        </div>
+        <div class="obra">
+            <img class="imagenMuestra" src="/imagenes/<%= muestraElegida.imagen7 %>" alt="imagen de obra">
+        </div>
+        <div class="obra">
+            <img class="imagenMuestra" src="/imagenes/<%= muestraElegida.imagen8 %>" alt="imagen de obra">
+        </div>
+        <div class="obra">
+            <img class="imagenMuestra" src="/imagenes/<%= muestraElegida.imagen9 %>" alt="imagen de obra">
+        </div>
+        <div class="obra">
+            <img class="imagenMuestra" src="/imagenes/<%= muestraElegida.imagen10 %>" alt="imagen de obra">
+        </div>
+        <div class="obra">
+            <img class="imagenMuestra" src="/imagenes/<%= muestraElegida.imagen11 %>" alt="imagen de obra">
+        </div>
+        <div class="obra">
+            <img class="imagenMuestra" src="/imagenes/<%= muestraElegida.imagen12 %>" alt="imagen de obra">
+        </div>
+        <div class="obra">
+            <img class="imagenMuestra" src="/imagenes/<%= muestraElegida.imagen13 %>" alt="imagen de obra">
+        </div>
+        <div class="obra">
+            <img class="imagenMuestra" src="/imagenes/<%= muestraElegida.imagen14 %>" alt="imagen de obra">
+        </div>
+        <div class="obra">
+            <img class="imagenMuestra" src="/imagenes/<%= muestraElegida.imagen15 %>" alt="imagen de obra">
+        </div>
 
-            <button class="boton-comprar">
-               <a  class="comprar" href="">Comprar</a> 
-            </button>
-        </div>
-            
-        <p class="descripcion-obra"><%= obraElegida.descripción %>
-        </p>
-       
-        </div>
-    </article>
-    
-    <form method="POST" action="/eliminar/<%= obraElegida.id %>?_method=DELETE" style="display: inline-flex">
+    </div>
+    <br>
+    <br>
+    <form method="POST" action="/muestras/eliminar/<%= muestraElegida.id %>?_method=DELETE" style="display: inline-flex">
         <button type="submit" class="action-button-delete">ELIMINAR</button>
     </form>
-
         <button type="submit" class="action-button-edit">
-            <a href="/editar/<%= obraElegida.id %>">EDITAR</a>
+            <a href="/muestras/editar/<%= muestraElegida.id %>">EDITAR</a>
+        </button>
+        <button type="submit" class="action-button-edit">
+            <a href="/muestras/crear/<%= muestraElegida.id %>">CREAR</a>
         </button>
     
     <% } %>

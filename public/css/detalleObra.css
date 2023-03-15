@@ -2,9 +2,17 @@
 img {
     margin-top: 170px;
 }
+.imagenMuestra{
+    margin-top: 5px;
+}
 .titulo-obra {
     color:rgba(18, 18, 47,0.8);
     font-size: 25px;
+}
+.titulo-muestra {
+    color:rgba(18, 18, 47,0.8);
+    font-size: 25px;
+    margin-top: 180px;
 }
 .precio-obra {
     color: rgba(18, 18, 47, 0.6);
@@ -15,6 +23,16 @@ img {
     font-size: 18px;
     max-width: 550px;
 }
+.descripcion-muestra {
+    color: rgba(15, 15, 36, 0.3);
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+.contenedorDetalleMuestras {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 340px );
+    margin-top: 10px;
+} 
 .boton-comprar {
     background-color: rgba(18, 18, 47,0.1) ;
     color:rgba(18, 18, 47,0.6); 
@@ -25,7 +43,6 @@ img {
     margin-top: 6px;
     margin-left: 20px;
     transition: all 2s;
-    
 }
 .comprar {
     background-color: transparent;
@@ -57,6 +74,21 @@ img {
         box-shadow: 20px 20px 80px rgba(18, 18, 47,0.4);
         border-radius: 9px;
     }
+    .titulo-muestra {
+        color:rgba(18, 18, 47,0.8);
+        font-size: 25px;
+        margin-top: 280px;
+    }
+    .descrpcion-muestra {
+        color: rgba(18, 18, 47,0.3);
+        font-size: 18px;
+        margin-bottom: 5px;
+    }
+    .contenedorDetalleMuestras {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, 680px );
+        margin-top: 10px;
+    } 
     
 
 }

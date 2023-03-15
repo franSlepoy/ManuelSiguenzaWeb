@@ -16,6 +16,6 @@ const storage = multer.diskStorage({
   const upload = multer({ storage: storage })
 
   router.get("/", muestrasController.index);
-
+  router.get("/muestraDetalle/:id", muestrasController.detail);
 
   module.exports = router;
