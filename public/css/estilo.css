@@ -11,14 +11,22 @@
        letter-spacing: 0.2em;
        padding: 5px;
        margin:auto;
-       
-   
+}
+.login, .registro {
+   font-size: 12px;
+}
+i {
+     margin: 3px;
+}
+.users {
+   position: relative;
+   left: 80%;
+   top: -166px;
 }
 .hamburguesa {
     height: 60px;
     width: 60px;
     font-size: 30px;
- 
  }
 
 header.mobile {
