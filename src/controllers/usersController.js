@@ -1,3 +1,5 @@
+const path = require("path");
+
 const usersController = {
         
         registro: (req, res) => {
@@ -7,7 +9,7 @@ const usersController = {
             res.render(path.join(__dirname, "../views/users/login"));
         },
         profile: (req, res) => {
-            res.render("profile");
+            res.render(path.join(__dirname, "../views/users/profile"));
         },
 }
 

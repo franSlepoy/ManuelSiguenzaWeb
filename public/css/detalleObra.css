@@ -2,9 +2,13 @@
 img {
     margin-top: 170px;
 }
+header .mobile-compu {
+    padding: 0px;
+}
 .imagenMuestra{
     margin-top: 5px;
 }
+
 .titulo-obra {
     color:rgba(18, 18, 47,0.8);
     font-size: 25px;
@@ -63,11 +67,13 @@ img {
     }
     article{
         display: flex;
+        margin-top: 35px;
        
     }
     .detalle-obra {
         margin-top: 250px;
         margin-left: 18px;
+        
     }
     .boton-comprar:hover {
         background-color: #fafafa ;
@@ -77,7 +83,7 @@ img {
     .titulo-muestra {
         color:rgba(18, 18, 47,0.8);
         font-size: 25px;
-        margin-top: 280px;
+        margin-top: 300px;
     }
     .descrpcion-muestra {
         color: rgba(18, 18, 47,0.3);

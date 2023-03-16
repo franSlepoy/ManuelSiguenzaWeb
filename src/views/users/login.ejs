@@ -15,10 +15,28 @@
 <%- include("../partials/header") %>
 <br>
 <body>
-    <h1 class="titulo">Login</h1>
-
-    
-</body>
+    <form action="/users/Login" method="POST" enctype="mutipart/form-data"> 
+        <h1 class="titulo">Login</h1>
+        <br>
+        <label for="nombre">Nombre completo:</label>
+        <input type="text" placeholder="Nombre completo" name="nombreCompleto">
+        <br>
+        <br>
+        <label for="email">Email:</label>
+        <input type="email" placeholder="e-mail" id="email" name="email" required>
+        <br>
+        <br>
+        <label for="contraseña">Contraseña:</label>
+        <input type="password" placeholder="Contraseña" id="contraseña" name="contraseña" required> 
+        <br>
+        <br>
+        <label for="pais">País:</label>
+        <input type="search" placeholder="pais" id="pais" name="pais">
+        <br>
+        <br>
+          <button class="login" type="submit">Enviar</button>
+        <br>
+   </body>
 <br>
 
 <%- include("../partials/footer") %>

@@ -20,7 +20,7 @@ i {
 }
 .users {
    position: relative;
-   left: 80%;
+   left: 70%;
    top: -166px;
 }
 .hamburguesa {
@@ -42,6 +42,8 @@ header.mobile {
 }
 header.compu {
      display: none;
+     padding: 0px;
+     margin-bottom: 15px;
  }
 .contenedorObras {
       display: grid;
@@ -88,18 +90,18 @@ a {
           display: block;
           font-family: 'Merriweather Sans', sans-serif;
           background-color: #fafafa;
-          padding: 5px;
+          padding: 0px;
           position: fixed;
           width: 100%;
      }
     
      .contenedorObras {
-          margin-top: 250px;
+          margin-top: 300px;
      }
      .contenedorMuestras {
           display: grid;
           grid-template-columns: repeat(auto-fill, 680px );
-          margin-top: 250px;
+          margin-top: 300px;
      } 
      .imagenMuestra {
           max-width: 600px;
