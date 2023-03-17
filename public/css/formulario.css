@@ -1,6 +1,10 @@
 form {
     margin-top: 200px;
 }
+.errores {
+    color: rgb(184, 96, 14);
+    font-size: 14px;
+}
 @media (min-width: 760px){
     form {
         margin-top:270px;
