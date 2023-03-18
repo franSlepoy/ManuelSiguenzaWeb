@@ -26,10 +26,10 @@ const obrasController = {
     store: (req, res) => {
 		let nuevaObra = {
 			id: obras.length == 0? 1: obras[obras.length - 1].id + 1,
-    nombre_año: req.body.nombre_año ,
-    descripción: req.body.descripción ,
     precio: req.body.precio,
     imagen: req.file.filename,
+    nombre_año: req.body.nombre_año,
+    descripción: req.body.descripción,
     }
 	obras.push(nuevaObra);
 	let nuevaObraGuardar = JSON.stringify(obras,null,2);

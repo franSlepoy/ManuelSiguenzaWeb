@@ -7,6 +7,7 @@ const obrasRoutes = require("./routes/obrasRoutes");
 const muestrasRoutes = require("./routes/muestrasRoutes");
 const usersRoutes = require("./routes/usersRoutes");
 
+app.use(express.json())
 app.use(express.urlencoded({ extended: false}));
 app.use(methodOverride('_method'));
 app.use(express.static('public'));

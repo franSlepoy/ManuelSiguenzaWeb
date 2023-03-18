@@ -17,7 +17,7 @@
     <%- include("../partials/header") %>
     <% if (obraElegida) {%>
     <article>
-        <img src="<%= obraElegida.imagen %>" alt="una-obra-de-arte"> <br>
+        <img src="/imagenes/<%= obraElegida.imagen %>" alt="una-obra-de-arte"> <br>
         <div class="detalle-obra">
             <h2 class="titulo-obra"><%= obraElegida.nombre_año %></h2>
         <div class="precio-boton">
