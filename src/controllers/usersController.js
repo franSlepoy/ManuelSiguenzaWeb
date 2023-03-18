@@ -1,17 +1,24 @@
 const path = require("path");
 const { validationResult } = require("express-validator")
-//const fetch = require("node-fetch"); 
+const fetch = require("node-fetch"); 
 const { response } = require("express");
 
 
 const usersController = {
-        registro: (req, res) => {
-            //fetch("https://restcountries.eu/rest/v2/all")
-            //  .then(response => response.json())
-            //  .then(countries => {
-             //   res.send(countries)
-                res.render(path.join(__dirname, "../views/users/registro"));
-              //})
+        registro:  (req, res) => {
+            fetch("https://restcountries.com/v3.1/all")
+              .then(response => response.json())
+              .then(countries => {
+                countries.sort((a,b) =>{
+                    if(a.name.common > b.name.common ){
+                        return 1
+                    }if(a.name.common < b.name.common){
+                        return -1;
+                    }
+                    return 0
+                })
+                res.render(path.join(__dirname, "../views/users/registro"), { countries:countries });
+              })
             
         },
         procesoRegistro: (req, res) =>{
@@ -23,7 +30,7 @@ const usersController = {
                 oldData: req.body   
                 });
             }
-            res.send("Bien ahí, complestaste bien la información");
+            res.send("Bien ahí, completaste bien la información");
         },
 
         login:  (req, res) => {
