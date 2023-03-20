@@ -17,9 +17,14 @@ const User = {
         let userFound = allUsers.find(oneUser => oneUser.id === id);
         return userFound;
     },
+    findByField: (field, text) =>{
+        let allUsers = JSON.parse(fs.readFileSync(fileName, "utf-8"));
+        let userFound = allUsers.find(oneUser => oneUser[field] === text);
+        return userFound;
+    },
 
     create: function (userData) {
 
     }
 }
-console.log(User.findByPk(1))
+console.log(User.findByField("email","lito@hola.com"))
