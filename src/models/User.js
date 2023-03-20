@@ -22,9 +22,13 @@ const User = {
         let userFound = allUsers.find(oneUser => oneUser[field] === text);
         return userFound;
     },
-
+    
     create: function (userData) {
+        let allUsers = JSON.parse(fs.readFileSync(fileName, "utf-8"));
+        allUsers.push(userData);
+        fs.writeFileSync(fileName, JSON.stringify(allUsers,null, " "));
+        return true;
 
     }
 }
-console.log(User.findByField("email","lito@hola.com"))
+console.log(User.create({nombreCompleto: "Carmen" , email: "car@hola.com" }));
