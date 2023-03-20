@@ -4,17 +4,7 @@ const path = require("path");
 const obrasController = require("../controllers/obrasController")
 const multer = require("multer");
 
-
-const storage = multer.diskStorage({
-    destination: function (req, file, cb) {
-      cb(null, path.join(__dirname, "../../public/imagenes"));
-    },
-    filename: function (req, file, cb) {
-      cb(null, 'obra' + Date.now()+path.extname(file.originalname))
-    }
-  });
-  
-  const upload = multer({ storage: storage })
+const uploadFile = require("../middlewares/multerMiddlewears");
 
 router.get("/", obrasController.index);
 router.get("/menuMobile", obrasController.menuMobile);
@@ -22,10 +12,10 @@ router.get("/bio", obrasController.bio);
 router.get("/detalleObra/:id", obrasController.detail);
 
 router.get("/crear/:id", obrasController.crear);
-router.post("/crear", upload.single("imagen"), obrasController.store);
+router.post("/crear", uploadFile.single("imagen"), obrasController.store);
 
 router.get("/editar/:id", obrasController.editar);
-router.put("/editar/:id", upload.single("imagen"), obrasController.update);
+router.put("/editar/:id", uploadFile.single("imagen"), obrasController.update);
 
 router.delete("/eliminar/:id", obrasController.destroy);
 

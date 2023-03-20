@@ -1,0 +1,16 @@
+[
+    {
+      "id": 1,
+      "nombreCompleto": "Carlos Velazco",
+      "email": "lito@hola.com",
+      "contraseña": "carl456",
+      "país": "Argentina"
+    },
+    {
+        "id": 2,
+        "nombreCompleto": "franko Savella",
+        "email": "franko@pepito.com",
+        "contraseña": "chanchito2",
+        "país": "Argentina"
+      }
+  ]

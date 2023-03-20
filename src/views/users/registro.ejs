@@ -47,9 +47,9 @@
             <% } %>
         <br>
         <br>
-        <label for="pais">País:</label>
+        <label for="país">País:</label>
         <select name="país" required >
-            <option value="" selected disabled> Seleccionar país...</option>
+            <option selected disabled> Seleccionar país...</option>
             <% countries.forEach(country => { %>
             <option><%= country.name.common %> <%= country.flag  %></option>
             <% }) %>

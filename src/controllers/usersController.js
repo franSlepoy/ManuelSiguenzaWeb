@@ -9,7 +9,7 @@ const usersController = {
             fetch("https://restcountries.com/v3.1/all")
               .then(response => response.json())
               .then(countries => {
-                countries.sort((a,b) =>{
+                    countries.sort((a,b) =>{
                     if(a.name.common > b.name.common ){
                         return 1
                     }if(a.name.common < b.name.common){
@@ -17,7 +17,7 @@ const usersController = {
                     }
                     return 0
                 })
-                res.render(path.join(__dirname, "../views/users/registro"), { countries:countries });
+                res.render(path.join(__dirname, "../views/users/registro"), { countries });
               })
             
         },
@@ -25,7 +25,7 @@ const usersController = {
             const resultValidation = validationResult(req);
             
             if(resultValidation.errors.length > 0){
-                return res.render(path.join(__dirname, "../views/users/registro"),
+                return res.render(path.join(__dirname, "../views/users/registro"), { countries },
                 {errors: resultValidation.mapped(),
                 oldData: req.body   
                 });
