@@ -7,7 +7,19 @@ const User = {
     getData: () => {
         return JSON.parse(fs.readFileSync(fileName, "utf-8"));
     },
+
+    findAll: () => {
+        return JSON.parse(fs.readFileSync(fileName, "utf-8"));
+    },
+
+    findByPk: (id) =>{
+        let allUsers = JSON.parse(fs.readFileSync(fileName, "utf-8"));
+        let userFound = allUsers.find(oneUser => oneUser.id === id);
+        return userFound;
+    },
+
     create: function (userData) {
 
     }
 }
+console.log(User.findByPk(1))
