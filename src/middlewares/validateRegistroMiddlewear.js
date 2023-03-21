@@ -5,7 +5,7 @@ const validations = [
     body("email").notEmpty().withMessage("Tenés que escribir tu email").bail()
                  .isEmail().withMessage("Tenés que escribir un formato válido"),
     body("password").notEmpty().withMessage("Tenés que escribir una contraseña"),
-    //body("país").notEmpty.withMessage("Tenés que elegir un país"),
+    //body("pais").notEmpty.withMessage("Tenés que elegir un país"),
 ];
 
 module.exports = validations;

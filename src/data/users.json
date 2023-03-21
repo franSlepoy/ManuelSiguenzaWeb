@@ -4,35 +4,34 @@
   "nombreCompleto": "Carlos Velazco",
   "email": "lito@hola.com",
   "password": "carl456",
-  "país": "Argentina"
+  "pais": "Argentina"
  },
  {
   "id": 2,
   "nombreCompleto": "franko Savella",
   "email": "franko@pepito.com",
   "password": "chanchito2",
-  "país": "Argentina"
+  "pais": "Argentina"
  },
  {
   "id": 3,
   "nombreCompleto": "Pibe valderrama",
   "email": "johndoe@example.com",
   "password": "password123",
-  "país": "Colombia"
+  "pais": "Colombia"
  },
  {
   "id": 4,
   "nombreCompleto": "Tren Valencia",
   "email": "tren@example.com",
   "password": "pass1223",
-  "país": "Colombia"
+  "pais": "Colombia"
  },
  {
   "id": 5,
   "nombreCompleto": "Alex Aguinaga",
   "email": "alex@example.com",
   "password": "Barcelo55",
-  "país": "Ecuador"
- }
-
+  "pais": "Ecuador"
+ },
 ]

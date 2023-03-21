@@ -32,15 +32,31 @@ const usersController = {
                 oldData: req.body   
                 });
             }
-        
-        let userToCreate = {
+            let userInDB = User.findByField("email", req.body.email);
+
+            if(userInDB) {
+                return res.render(path.join(__dirname, "../views/users/registro"), {
+                  errors: {
+                       email:{
+                         msg: "Este email ya está registrado."
+                     }
+                 },
+                 oldData: req.body
+                });
+            }
+
+            let userToCreate = {
             ...req.body,
             password: bcryptjs.hashSync(req.body.password,10)
             }
+            let userCreated = User.create(userToCreate);
 
-            User.create(userToCreate);
-            res.send("Bien ahí, completaste bien la información. Se guardo al usuario.");
-        },
+      return res.redirect("/");
+    },
+
+           
+           
+        
 
         login:  (req, res) => {
             res.render(path.join(__dirname, "../views/users/login"));
