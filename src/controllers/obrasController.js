@@ -18,7 +18,7 @@ const obrasController = {
     detail : (req,res) => {
         let id = req.params.id;
         const obraElegida = obras.find((obra) => obra.id == id)
-        return res.render(path.resolve(__dirname, "../views/obras/detalleObra"), {obraElegida})
+        return res.render(path.join(__dirname, "../views/obras/detalleObra"), {obraElegida})
     },
     crear: (req,res) => {
         res.render(path.join(__dirname, "../views/obras/crear"));
@@ -26,10 +26,11 @@ const obrasController = {
     store: (req, res) => {
 		let nuevaObra = {
 			id: obras.length == 0? 1: obras[obras.length - 1].id + 1,
-    precio: req.body.precio,
-    imagen: req.file.filename,
-    nombre_año: req.body.nombre_año,
-    descripción: req.body.descripción,
+            nombre_ano: req.body.nombre_ano ,
+            descripcion: req.body.descripcion ,
+            precio: req.body.precio,
+            imagen: req.file.filename,
+   
     }
 	obras.push(nuevaObra);
 	let nuevaObraGuardar = JSON.stringify(obras,null,2);
