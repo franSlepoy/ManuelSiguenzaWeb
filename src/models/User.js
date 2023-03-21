@@ -1,11 +1,19 @@
-const fs = require("fs");
-const path = require("path")
-
+const fs = require('fs');
+const path = require("path");
 const fileName = path.join(__dirname, "../data/users.json");
 
 const User = {
     getData: () => {
-        return JSON.parse(fs.readFileSync(fileName, "utf-8"));
+        return JSON.parse(fs.readFileSync(fileName, 'utf-8'));
+    },
+    generateId: ()=> {
+        let allUsers = JSON.parse(fs.readFileSync(fileName, "utf-8"));
+        let lastUser = allUsers.pop();
+        return lastUser.id + 1;
+        if(lastUser){
+            return lastUser.id +1;
+        }
+        return 1
     },
 
     findAll: () => {
@@ -22,12 +30,19 @@ const User = {
         let userFound = allUsers.find(oneUser => oneUser[field] === text);
         return userFound;
     },
-        create: function (userData) {
+
+    create: function (userData) {
         let allUsers = JSON.parse(fs.readFileSync(fileName, "utf-8"));
         allUsers.push(userData);
         fs.writeFileSync(fileName, JSON.stringify(allUsers,null, " "));
         return true;
-
+    },
+    delete: () =>{
+        let allUsers = JSON.parse(fs.readFileSync(fileName, "utf-8"));
+        let finalUsers = allUsers.filter(oneUser.id !== id);
+        fs.writeFileSync(fileName, JSON.stringify(finalUsers,null, " "));
+        return true;
     }
 }
-console.log(User.create({nombreCompleto: "Carmen" , email: "car@hola.com" }));
+module.exports = User;
+

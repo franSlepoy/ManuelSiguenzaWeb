@@ -3,35 +3,36 @@
   "id": 1,
   "nombreCompleto": "Carlos Velazco",
   "email": "lito@hola.com",
-  "contraseña": "carl456",
+  "password": "carl456",
   "país": "Argentina"
  },
  {
   "id": 2,
   "nombreCompleto": "franko Savella",
   "email": "franko@pepito.com",
-  "contraseña": "chanchito2",
+  "password": "chanchito2",
   "país": "Argentina"
  },
  {
   "id": 3,
-  "nombreCompleto": "John Doe",
+  "nombreCompleto": "Pibe valderrama",
   "email": "johndoe@example.com",
-  "contraseña": "password123",
+  "password": "password123",
   "país": "Colombia"
  },
  {
   "id": 4,
   "nombreCompleto": "Tren Valencia",
   "email": "tren@example.com",
-  "contraseña": "pass1223",
-  "país": "Chile"
+  "password": "pass1223",
+  "país": "Colombia"
  },
  {
   "id": 5,
   "nombreCompleto": "Alex Aguinaga",
   "email": "alex@example.com",
-  "contraseña": "Barcelo55",
+  "password": "Barcelo55",
   "país": "Ecuador"
  }
+
 ]

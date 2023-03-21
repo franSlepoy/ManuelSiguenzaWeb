@@ -2,8 +2,8 @@ const path = require("path");
 const { validationResult } = require("express-validator")
 const fetch = require("node-fetch"); 
 const { response } = require("express");
-
-             
+const User = require("../models/User");
+const bcryptjs = require("bcryptjs");
 
 const usersController = {
         registro:  (req, res) => {
@@ -32,7 +32,14 @@ const usersController = {
                 oldData: req.body   
                 });
             }
-            res.send("Bien ahí, completaste bien la información");
+        
+        let userToCreate = {
+            ...req.body,
+            password: bcryptjs.hashSync(req.body.password,10)
+            }
+
+            User.create(userToCreate);
+            res.send("Bien ahí, completaste bien la información. Se guardo al usuario.");
         },
 
         login:  (req, res) => {
