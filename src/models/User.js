@@ -13,7 +13,7 @@ const User = {
         if(lastUser){
             return lastUser.id +1;
         }
-        return 1
+        return 1;
     },
 
     findAll: () => {
@@ -33,7 +33,11 @@ const User = {
 
     create: function (userData) {
         let allUsers = JSON.parse(fs.readFileSync(fileName, "utf-8"));
-        allUsers.push(userData);
+        let newUser = {
+            id: this.generateId(),
+            ...userData
+        }
+        allUsers.push(newUser);
         fs.writeFileSync(fileName, JSON.stringify(allUsers,null, " "));
         return true;
     },

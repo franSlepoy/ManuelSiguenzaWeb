@@ -51,19 +51,40 @@ const usersController = {
             }
             let userCreated = User.create(userToCreate);
 
-      return res.redirect("/");
+      return res.redirect("/users/login");
     },
 
-           
-           
-        
-
-        login:  (req, res) => {
+    login:  (req, res) => {
             res.render(path.join(__dirname, "../views/users/login"));
-        },
-        profile: (req, res) => {
+    },
+    loginProcess: (req,res) => {
+        let userToLogin = User.findByField("email",req.body.email);
+
+        if(userToLogin){
+          let isOkThePassword = bcryptjs.compareSync(req.body.password, userToLogin.password);
+          if(isOkThePassword){
+            return res.send("ok, dale que va")
+          }
+          return res.render(path.join(__dirname, "../views/users/login"), {
+            errors: {
+                email: {
+                    msg: "La contraseña es incorrecta"
+                }
+            }
+        });
+        }
+         return res.render(path.join(__dirname, "../views/users/login"), {
+            errors: {
+                email: {
+                    msg: "Este email no se encuentra registrado"
+                }
+            }
+        });
+    },
+
+    profile: (req, res) => {
             res.render(path.join(__dirname, "../views/users/profile"));
-        },
+    },
 }
 
 module.exports = usersController;
