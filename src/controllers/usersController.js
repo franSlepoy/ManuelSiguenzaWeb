@@ -63,7 +63,7 @@ const usersController = {
         if(userToLogin){
           let isOkThePassword = bcryptjs.compareSync(req.body.password, userToLogin.password);
           if(isOkThePassword){
-            return res.send("ok, dale que va")
+            return  res.redirect('/users/profile')
           }
           return res.render(path.join(__dirname, "../views/users/login"), {
             errors: {
