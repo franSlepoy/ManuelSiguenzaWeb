@@ -2,11 +2,17 @@ const express = require('express');
 const path = require("path");
 const app = express();
 const methodOverride = require('method-override');
+const session = require("express-session");
 const PORT = process.env.PORT || 3000;
 const obrasRoutes = require("./routes/obrasRoutes");
 const muestrasRoutes = require("./routes/muestrasRoutes");
 const usersRoutes = require("./routes/usersRoutes");
 
+app.use(session({
+    secret: "Super secreto",
+    resave: false,
+    saveUninitialized: false,
+}));
 app.use(express.json())
 app.use(express.urlencoded({ extended: false}));
 app.use(methodOverride('_method'));

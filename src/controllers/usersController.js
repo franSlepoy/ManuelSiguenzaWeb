@@ -63,7 +63,9 @@ const usersController = {
         if(userToLogin){
           let isOkThePassword = bcryptjs.compareSync(req.body.password, userToLogin.password);
           if(isOkThePassword){
-            return  res.redirect('/users/profile')
+            delete userToLogin.password;
+            req.session.userLogged = userToLogin;
+            return  res.redirect('/users/profile');
           }
           return res.render(path.join(__dirname, "../views/users/login"), {
             errors: {
@@ -83,7 +85,9 @@ const usersController = {
     },
 
     profile: (req, res) => {
-            res.render(path.join(__dirname, "../views/users/profile"));
+          return res.render(path.join(__dirname, "../views/users/profile"), {
+            user: req.session.userLogged
+          });
     },
 }
 

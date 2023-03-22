@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/css/estilo.css">
     <link rel="stylesheet" href="/css/formulario.css">
+    <link rel="stylesheet" href="/css/detalleObra.css">
     <link href="https://fonts.googleapis.com/css2?family=Merriweather+Sans&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Karla:ital@1&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/851c995492.js" crossorigin="anonymous"></script>
@@ -17,26 +18,12 @@
 <body>
     <form action="" method="" enctype="mutipart/form-data"> 
         <h1 class="titulo">Perfil</h1>
+       
+        <h1 class="titulo-obra">Hola <%= user.nombreCompleto %> </h1>
+        <p class="descripcion">de <%= user.pais  %>  </p>
+        <p class="descripcion">email:<%= user.email  %>  </p>
+        
         <br>
-        <label for="nombre">Nombre completo:</label>
-        <input type="text" placeholder="Nombre completo" name="nombreCompleto"
-        value="">
-        <br>
-        <br>
-        <label for="email">Email:</label>
-        <input type="email" placeholder="e-mail" id="email" name="email"
-        value="">
-        <br>
-        <br>
-        <label for="pais">País:</label>
-        <select name="pais"</select> >
-            
-        </select>
-        <br>
-        <br>
-          
-    
-    
 </body>
 <br>
 
