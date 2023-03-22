@@ -33,5 +33,12 @@
   "email": "alex@example.com",
   "password": "Barcelo55",
   "pais": "Ecuador"
+ },
+ {
+  "id": 6,
+  "nombreCompleto": "Ange Di Maria",
+  "email": "angelito@campeon.com",
+  "password": "$2a$10$.kEpycm.wRWakymQn1pXa.HZmxH8KxfiPvLTKS/KZBSOdJHJRyFhO",
+  "pais": "Argentina 🇦🇷"
  }
 ]
