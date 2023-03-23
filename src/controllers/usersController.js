@@ -107,6 +107,10 @@ const usersController = {
           }
           );
     },
+    logout: (req,res) =>{
+        req.session.destroy();
+        return res.redirect("/muestras")
+    }
 }
 
 module.exports = usersController;
