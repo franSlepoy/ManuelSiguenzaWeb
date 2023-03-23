@@ -7,12 +7,15 @@ const PORT = process.env.PORT || 3000;
 const obrasRoutes = require("./routes/obrasRoutes");
 const muestrasRoutes = require("./routes/muestrasRoutes");
 const usersRoutes = require("./routes/usersRoutes");
+const userLoggedMiddlewere = require("./middlewares/userLoggedMiddleware")
 
+app.use(userLoggedMiddlewere);
 app.use(session({
     secret: "Super secreto",
     resave: false,
     saveUninitialized: false,
 }));
+app.use(userLoggedMiddlewere);
 app.use(express.json())
 app.use(express.urlencoded({ extended: false}));
 app.use(methodOverride('_method'));

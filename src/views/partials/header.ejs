@@ -22,6 +22,18 @@
                 <li><a class="nav" href="mailto:supernoli@gmail.com">Contacto</a></li>
             </ul>
             <div class="users">
+                <% if(locals.isLogged) { %>
+                <div class="perfil">
+                    <h1 class="nombreUsuario">Hola <%= userLogged.nombreCompleto%>  </h1>
+                    <p class="paisUsuario">de <%=userLogged.pais%>   </p><div class="login">
+                        <div class="perfilLink">
+                            <a href="/users/profile">
+                                <i class="fa-solid fa-user"> Perfil</i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <% } else { %>
                 <div class="login">
                     <a href="/users/login">
                         <i class="fa-solid fa-user"> Login</i>
@@ -32,9 +44,9 @@
                         <i class="fa-regular fa-user"> Registro</i>
                     </a>
                 </div>
+                <% } %>
             </div>
-            
-        </nav>
+         </nav>
     </header>
 </header>
 
