@@ -82,6 +82,10 @@ const usersController = {
           if(isOkThePassword){
             delete userToLogin.password;
             req.session.userLogged = userToLogin;
+            if(req.body.recordarUsuario){
+                res.cookie("userEmail",req.body.email, { maxAge: (1000 * 60) * 2})
+            }
+
             return  res.redirect('/users/profile');
           }
           return res.render(path.join(__dirname, "../views/users/login"), {
@@ -102,6 +106,7 @@ const usersController = {
     },
 
     profile: (req, res) => {
+          console.log(req.cookies.userEmail)
           return res.render(path.join(__dirname, "../views/users/profile"), {
             user: req.session.userLogged
           }

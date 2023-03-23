@@ -1,16 +1,15 @@
 * {
-    
-          font-family: 'Merriweather Sans', sans-serif;
-           background-color: #fafafa;
-           padding: 2px;
+    font-family: 'Merriweather Sans', sans-serif;
+    background-color: #fafafa;
+    padding: 2px;
      
 }
 .titulo {
-       font-size: 20px;
-       color: rgb(18, 18, 47,);
-       letter-spacing: 0.2em;
-       padding: 5px;
-       margin:auto;
+     font-size: 20px;
+     color: rgb(18, 18, 47,);
+     letter-spacing: 0.2em;
+     padding: 5px;
+     margin:auto;
 }
 .login, .registro, .perfil {
    font-size: 12px;
@@ -18,9 +17,10 @@
 .perfilLink{
      font-size: 10px;
      position: relative;
-     left: -6px;
-     top: -17px;
+     left: -7px;
+     top: -10px;
 }
+
 i {
      margin: 3px;
 }
@@ -41,8 +41,9 @@ i {
 .paisUsuario{
      color:rgba(18, 18, 47,0.7); 
      margin-top: 0px;
+     position: relative;
+     top: 2px;
 }
-
 .hamburguesa {
     height: 60px;
     width: 60px;
