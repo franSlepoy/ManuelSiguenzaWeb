@@ -26,32 +26,49 @@ const usersController = {
     },
         procesoRegistro: (req, res) =>{
                const resultValidation = validationResult(req);
-               if(resultValidation.errors.length > 0){
-                return res.render(path.join(__dirname, "../views/users/registro"), { countries },
-                {errors: resultValidation.mapped(),
-                oldData: req.body   
-                });
-            }
-            let userInDB = User.findByField("email", req.body.email);
+               if(!resultValidation.isEmpty()){
+                fetch("https://restcountries.com/v3.1/all")
+              .then(response => response.json())
+              .then(countries => {
+                countries.sort((a,b) =>{
+                if(a.name.common > b.name.common ){
+                    return 1
+                }if(a.name.common < b.name.common){
+                    return -1;
+                }
+                return 0
+            })
+            
+            return res.render(path.join(__dirname, "../views/users/registro"), { countries ,
+            errors: resultValidation.mapped(),
+            oldData: req.body   
+            }); 
+          });
+                
+                
+            } else {
+                let userInDB = User.findByField("email", req.body.email);
 
-            if(userInDB) {
-                return res.render(path.join(__dirname, "../views/users/registro"), {
-                  errors: {
-                       email:{
-                         msg: "Este email ya está registrado."
-                     }
-                 },
-                 oldData: req.body
-                });
+                if(userInDB) {
+                    return res.render(path.join(__dirname, "../views/users/registro"), {
+                      errors: {
+                           email:{
+                             msg: "Este email ya está registrado."
+                         }
+                     },
+                     oldData: req.body
+                    });
+                }
+    
+                let userToCreate = {
+                ...req.body,
+                password: bcryptjs.hashSync(req.body.password,10)
+                }
+                let userCreated = User.create(userToCreate);
+    
+          return res.redirect("/users/login");
             }
-
-            let userToCreate = {
-            ...req.body,
-            password: bcryptjs.hashSync(req.body.password,10)
-            }
-            let userCreated = User.create(userToCreate);
-
-      return res.redirect("/users/login");
+            
     },
 
     login:  (req, res) => {
@@ -87,7 +104,8 @@ const usersController = {
     profile: (req, res) => {
           return res.render(path.join(__dirname, "../views/users/profile"), {
             user: req.session.userLogged
-          });
+          }
+          );
     },
 }
 

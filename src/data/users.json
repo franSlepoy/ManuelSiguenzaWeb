@@ -40,5 +40,26 @@
   "email": "angelito@campeon.com",
   "password": "$2a$10$.kEpycm.wRWakymQn1pXa.HZmxH8KxfiPvLTKS/KZBSOdJHJRyFhO",
   "pais": "Argentina 🇦🇷"
+ },
+ {
+  "id": 7,
+  "nombreCompleto": "Carmen Villa",
+  "email": "carmenvdev@gmail.com",
+  "password": "$2a$10$gzv8nIthhITzOzA9pWpB9etzN1mm2Llulb.aC8KDpP0BMUckmVr52",
+  "pais": "Argentina 🇦🇷"
+ },
+ {
+  "id": 8,
+  "nombreCompleto": "Fran",
+  "email": "",
+  "password": "$2a$10$f6jCfvT/n1YJm7un9JleD.OkywCtMoxTX0ZYWog4EsRZrlyXoywDW",
+  "pais": "Iraq 🇮🇶"
+ },
+ {
+  "id": 9,
+  "nombreCompleto": "",
+  "email": "slepoyfrancisco@gmail.com",
+  "password": "$2a$10$.b.UyJnePSupC518sJja6uowvstO1hAZouqc62zhRkrgBJU55RR46",
+  "pais": "Andorra 🇦🇩"
  }
 ]

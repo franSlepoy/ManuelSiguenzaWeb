@@ -15,7 +15,7 @@
 <%- include("../partials/header") %>
 <br>
 <body>
-    <form action="/users/registro" method="POST" enctype="mutipart/form-data"> 
+    <form action="/users/registro" method="POST"> 
         <h1 class="titulo">Registro</h1>
         <br>
         <label for="nombre">Nombre completo:</label>
@@ -50,7 +50,7 @@
         <label for="pais">País:</label>
         <select name="pais"</select> >
             <option selected disabled> Seleccionar país...</option>
-            <% countries.forEach(country => { %>
+            <% Array.isArray(locals.countries)&& locals.countries.forEach(country => { %>
             <option><%= country.name.common %> <%= country.flag  %></option>
             <% }) %>
         </select>
