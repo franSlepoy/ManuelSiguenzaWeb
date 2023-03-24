@@ -10,13 +10,12 @@ const usersRoutes = require("./routes/usersRoutes");
 const userLoggedMiddlewere = require("./middlewares/userLoggedMiddleware");
 const cookies = require("cookie-parser");
 
-app.use(cookies());
-app.use(userLoggedMiddlewere);
 app.use(session({
     secret: "Super secreto",
     resave: false,
     saveUninitialized: false,
 }));
+app.use(cookies());
 app.use(userLoggedMiddlewere);
 app.use(express.json())
 app.use(express.urlencoded({ extended: false}));

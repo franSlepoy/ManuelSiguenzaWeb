@@ -1,51 +1,23 @@
 [
  {
   "id": 1,
-  "nombreCompleto": "Carlos Velazco",
-  "email": "lito@hola.com",
-  "password": "carl456",
-  "pais": "Argentina"
- },
- {
-  "id": 2,
-  "nombreCompleto": "franko Savella",
-  "email": "franko@pepito.com",
-  "password": "chanchito2",
-  "pais": "Argentina"
- },
- {
-  "id": 3,
-  "nombreCompleto": "Pibe valderrama",
-  "email": "johndoe@example.com",
-  "password": "password123",
-  "pais": "Colombia"
- },
- {
-  "id": 4,
-  "nombreCompleto": "Tren Valencia",
-  "email": "tren@example.com",
-  "password": "pass1223",
-  "pais": "Colombia"
- },
- {
-  "id": 5,
-  "nombreCompleto": "Alex Aguinaga",
-  "email": "alex@example.com",
-  "password": "Barcelo55",
-  "pais": "Ecuador"
- },
- {
-  "id": 6,
-  "nombreCompleto": "Ange Di Maria",
-  "email": "angelito@campeon.com",
-  "password": "$2a$10$.kEpycm.wRWakymQn1pXa.HZmxH8KxfiPvLTKS/KZBSOdJHJRyFhO",
-  "pais": "Argentina 🇦🇷"
- },
- {
-  "id": 7,
   "nombreCompleto": "Carmen Villa",
   "email": "carmenvdev@gmail.com",
   "password": "$2a$10$gzv8nIthhITzOzA9pWpB9etzN1mm2Llulb.aC8KDpP0BMUckmVr52",
+  "pais": "Argentina 🇦🇷"
+ },
+ {
+  "id": 2,
+  "nombreCompleto": "Pibe Valderrama",
+  "email": "elpibe@gol.com",
+  "password": "$2a$10$YlBF0HgSNGOhaPTGXQq67egkMCjDIRFjGnS25cjLC15ifz7rT4tFW",
+  "pais": "Colombia 🇨🇴"
+ },
+ {
+  "id": 3,
+  "nombreCompleto": "Angel Di Maria",
+  "email": "angelito@campeon.com",
+  "password": "$2a$10$IWvqdepVUc8Zzt1tKbB7K.XpnwwwpHinXGsnRfZS1/32u7Dbtzt/y",
   "pais": "Argentina 🇦🇷"
  }
 ]
