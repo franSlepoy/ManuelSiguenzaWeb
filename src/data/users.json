@@ -19,5 +19,12 @@
   "email": "angelito@campeon.com",
   "password": "$2a$10$IWvqdepVUc8Zzt1tKbB7K.XpnwwwpHinXGsnRfZS1/32u7Dbtzt/y",
   "pais": "Argentina 🇦🇷"
+ },
+ {
+  "id": 4,
+  "nombreCompleto": "Pollo",
+  "email": "pollo@lapucha.com",
+  "password": "$2a$10$GsqDwTDo82OM.B/8leq5Le1X.8MPu0qh8s9GxU55jER9OolHBPQ36",
+  "pais": "Brunei 🇧🇳"
  }
 ]
